@@ -6,28 +6,61 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `rgb(15,0,55)`,
-      background: `linear-gradient(90deg, rgba(15,0,55,1) 0%, rgba(29,109,253,1) 50%, rgba(252,176,69,1) 100%)`,
+      background: `linear-gradient(90deg, rgba(14,0,51,1) 0%, rgba(69,252,172,1) 100%)`,
       marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
-        margin: `0 auto`,
+        margin: `0`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `.5rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h2 style={{
+        margin: 0,
+      }}>
         <Link
           to="/"
           style={{
-            color: `white`,
             textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+            display: 'inline-flex',
+            alignItems: 'center',
+          }}>
+          <span id="logo"
+            style={{
+            backgroundColor: "white",
+            color: `rgba(15,0,55,1)`,
+            display: 'inline-block',
+            padding: '7px',
+            textDecoration: `none`,
+            fontSize: "14pt",
+            width: '55px',
+          }}>
+            <span style={{
+                display: `inline-grid`,
+              }}>
+              <span style={{
+                textDecoration: `none`,
+              }}>
+                LB
+              </span>
+              <span style={{
+                paddingLeft: `11px`,
+              }}>
+                AW
+              </span>
+            </span>
+          </span>
+          <span style={{
+            color: `white`,
+            paddingLeft: '15px',
+            textDecoration: `none`,
+          }}>
+            {siteTitle}
+          </span>
         </Link>
-      </h1>
+      </h2>
     </div>
   </header>
 )
